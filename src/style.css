@@ -5,7 +5,57 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #f0f0f0; /* إضافة لون خلفية عام */
   overflow-x: hidden;
+  box-sizing: border-box;
+
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+@media (min-width: 300px) and (max-width: 790px) {
+  body {
+    width: 100vw; /* العرض الكامل */
+    height: 100vh; /* الطول الكامل */
+    overflow-x: hidden; /* إخفاء أي تمرير أفقي */
+  }
+
+  .hero-section {
+    height: 100vh; /* الطول الكامل للشاشة */
+    width: 100vw; /* العرض الكامل للشاشة */
+    background-size: cover; /* تغطية الشاشة بالكامل بالخلفية */
+    background-position: center; /* مركز الصورة */
+  }
+  * {
+    box-sizing: border-box; /* منع تجاوز الحدود بسبب الحشوات أو الحدود */
+    max-width: 100%; /* تحديد الحد الأقصى للعرض */
+  }
+
+  img{
+    max-width: 100%;
+    height: auto; /* الحفاظ على النسبة الأصلية */
+  }
+
+  .container {
+    width: 100%; /* التأكد من أن الحاويات تتناسب مع الشاشة */
+  }
+}
+
+body {
+  font-size: 16px; /* الخط الأساسي */
+}
+
+h1 {
+  font-size: 2rem; /* يعتمد على حجم الخط الأساسي */
+}
+
+p {
+  font-size: 1rem;
+}
+
 
 h1, h2, p {
   margin: 0 0 15px 0;
@@ -23,48 +73,7 @@ a {
 }
 /* Media query for iPhone SE or smaller screens */
 
-/* Navigation Bar */
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 20px; /* Add padding to the left of the logo */
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  padding: 5px 10px;
-  transition: background-color 0.3s ease;
-}
-
-/* لون ثابت لرابط Accueil */
-nav ul li a[href="#home"] {
-  background-color: #333; /* اللون الثابت للخلفية */
-  border-radius: 3px;
-}
-
-nav ul li a[href="#home"]:hover {
-  background-color: rgb(125, 16, 16); /* اللون الذي يظهر عند التمرير */
-}
 
 /* Hero Section */
 .hero-section {
@@ -98,6 +107,11 @@ nav ul li a[href="#home"]:hover {
   font-size: 1.5em;
   margin-bottom: 30px;
 }
+.header, .footer, .main-content {
+  width: 100%; /* التأكد من أن هذه العناصر تتناسب مع الشاشة */
+  overflow: hidden; /* منع تجاوز المحتوى */
+}
+
 
 .btn-primary {
   display: inline-block;
@@ -347,9 +361,8 @@ input:focus, textarea:focus {
 }
 
 .contact-info {
-  display: flex; /* استخدام الفليكس لتوزيع العناصر */
-  justify-content: space-around; /* توزيع العناصر بالتساوي */
-  margin-bottom: 30px; /* مسافة سفلية */
+  margin-top: 20px; /* مسافة علوية */
+  margin: 100PX;
 }
 
 .contact-item {
@@ -373,6 +386,7 @@ input:focus, textarea:focus {
 
 .social-media {
   margin-top: 20px; /* مسافة علوية */
+  margin: 100PX;
 }
 
 .social-media h3 {

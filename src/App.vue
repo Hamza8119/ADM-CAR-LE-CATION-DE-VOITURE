@@ -3,26 +3,32 @@
   <div id="app">
     <!-- Navigation Bar -->
     <nav>
-      <div class="logo"><img src="./assets/images/logo10.jpg" alt="" class="logo10"></div>
-      <ul class="homme">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#car-catalogue">Catalogue de voitures</a></li>
-        <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
-        <li><a href="#contact-us">Contactez-nous</a></li>
-        <li><a href="#help">Aide</a></li>
-        <li><router-link to="/Login">Se connecter</router-link></li> <!-- رابط تسجيل الدخول -->
-      </ul>
-      <div class="icon3">
-            <i class=" fas fa-bars">
-              <li><a href="#home">Accueil</a></li>
-        <li><a href="#car-catalogue">Catalogue de voitures</a></li>
-        <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
-        <li><a href="#contact-us">Contactez-nous</a></li>
-        <li><a href="#help">Aide</a></li>
-        <li><router-link to="/Login">Se connecter</router-link></li> <!-- رابط تسجيل الدخول -->
-        </i>
-           </div>
-    </nav>
+  <div class="logo">
+    <img src="./assets/images/logo10.jpg" alt="Logo" class="logo10">
+  </div>
+  <ul class="homme">
+    <li><a href="#home">Accueil</a></li>
+    <li><a href="#car-catalogue">Catalogue de voitures</a></li>
+    <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
+    <li><a href="#contact-us">Contactez-nous</a></li>
+    <li><a href="#help">Aide</a></li>
+    <li><router-link to="/Login">Se connecter</router-link></li>
+  </ul>
+  <div class="icon3">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul>
+    <li><a href="#home">Accueil</a></li>
+    <li><a href="#car-catalogue">Catalogue de voitures</a></li>
+    <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
+    <li><a href="#contact-us">Contactez-nous</a></li>
+    <li><a href="#help">Aide</a></li>
+    <li><router-link to="/Login">Se connecter</router-link></li>
+  </ul>
+</div>
+
 
 
     <section id="home" class="hero-section" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
@@ -179,16 +185,20 @@ De plus, nous nous engageons à fournir un service client exceptionnel, avec une
         <h3 class="h3-3">Contactez-nous</h3>
         
         <div class="contact-item">
-            <i class="fas fa-phone fax-icon"></i>
-            <p class="p-14">+212528308387</p>
-        </div>
+    <a href="tel:+212528308387">
+        <i class="fas fa-phone fax-icon"></i>
+        <p class="p-14">+212528308387</p>
+    </a>
+</div>
+
         <div class="contact-item">
             <i class="fa-solid fa-envelope envelope-icon"></i>
             <p><a href="mailto:admcars2014@gmail.com">admcars2014@gmail.com</a></p>
         </div>
         <div class="contact-item">
     <i class="fa-solid fa-location-dot location-icon"></i>
-    <p class="p-14"><a href="https://www.google.com/maps/place/Ait+Melloul,+Quartier+Agdal,+Bloc+5" target="_blank">Ait Melloul, Quartier Agdal, Bloc 5</a></p>
+    <p class="p-14"><a href="https://maps.google.com/?q=30.335381,-9.503521" target="_blank" class="map-link">Quartier Agdal 2 Bloc 5 N 681 Ait Melloul</a>
+    </p>
 </div>
 
     </div>
@@ -196,13 +206,19 @@ De plus, nous nous engageons à fournir un service client exceptionnel, avec une
     <div class="social-media">
         <h3 class="h3-3">Suivez-nous</h3>
         <div class="contact-item">
-            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-            <p class="p-14">+212661385320</p>
-        </div>
+    <a href="https://wa.me/212661385320" target="_blank">
+        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+        <p class="p-14">+212661385320</p>
+    </a>
+</div>
+
         <div class="contact-item">
-            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-            <p class="p-14">+212634717609 </p>
-        </div>
+    <a href="https://wa.me/212634717609" target="_blank">
+        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+        <p class="p-14">+212634717609</p>
+    </a>
+</div>
+
         <div class="contact-item">
             <i class="fa-brands fa-facebook facebook-icon"></i>
             <p class="p-14"><a href="https://www.facebook.com/admcar" target="_blank">Adm Car</a></p>
@@ -218,6 +234,7 @@ De plus, nous nous engageons à fournir un service client exceptionnel, avec une
         <p class="p-9">Enjoy a unique experience with our high-quality cars at affordable prices, as we offer you special offers this month, with excellent service and our dedicated team is always ready to provide a comfortable and smooth rental experience. Read the reviews of our satisfied customers to discover the value of our services.</p>
     </div>
 </footer>
+
 
 <p class="p-10">&copy; Location de voitures ADM 2024. Tous droits réservés.</p>
 
@@ -295,47 +312,157 @@ export default {
     },
   },
 };
+document.addEventListener('click', (event) => {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const icon = document.querySelector('.icon3');
+  if (icon && icon.contains(event.target)) {
+    mobileMenu.classList.toggle('active'); // تفعيل أو إلغاء الكلاس عند الضغط
+  } else if (mobileMenu && !mobileMenu.contains(event.target)) {
+    mobileMenu.classList.remove('active'); // إغلاق القائمة عند الضغط خارجها
+  }
+});
+
+
+
+
 </script>
 <style>
    #app {
       font-family: Arial, sans-serif;
     }
 
-/* Style for medium and larger screens (default) */
-.icon3 {
-  display: none; /* اخفاء الايقونة افتراضيا */
+
+/* الأسلوب الافتراضي */
+.fa-bars{
+  display:none;
+}
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.homme {
-  display: flex; /* عرض الوصلة الافتراضي */
+nav .logo img {
+  max-width: 100px;
 }
 
-/* Media query for small screens (iPhone SE or smaller) */
-@media screen and (max-width :768px){
-.homme{
-    display: none;
-}
-.icon3{
- display: block;
-display: flex;
-width: 250px;
-margin-left: 50px;
-}
-.icon3:hover{
-   width: 250px;
-   height: 250px;
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-a{
-    font-size: 10px;
-    display: flex;
-    gap: 10;
-    margin: 0;
-    padding: 9px;
-   
-   
-} 
+nav ul li {
+  margin: 0 10px;
 }
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a::before, nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a::before {
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+nav ul li a::after {
+  top: 100%;
+  transform: scaleX(0);
+  transform-origin: top right;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::before, nav ul li a:hover::after {
+  background-color: rgb(125, 16, 16);
+  transform: scaleX(1);
+}
+
+/* استعلامات الوسائط */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* إخفاء القائمة الافتراضية */
+  }
+
+  .icon3 {
+    display: block; /* إظهار زر القائمة */
+    cursor: pointer;
+  }
+  .fa-bars{
+  display:block;
+}
+
+  .icon3 i {
+    font-size: 24px;
+    color: white;
+  }
+
+  .mobile-menu {
+    display: none; /* القائمة الجانبية مغلقة افتراضيًا */
+  }
+
+  .mobile-menu.active {
+    display: block; /* فتح القائمة عند النقر */
+  }
+}
+
+/* التنسيق للجوال */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.mobile-menu ul li a:hover {
+  background-color: rgb(125, 16, 16);
+}
+
+
+
 
 
     /* Hero Section */
