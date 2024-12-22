@@ -1,0 +1,515 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0; /* إضافة لون خلفية عام */
+  overflow-x: hidden;
+}
+
+h1, h2, p {
+  margin: 0 0 15px 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.p-1 {
+  color: rgba(255, 255, 255, 0.425);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Media query for iPhone SE or smaller screens */
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 20px; /* Add padding to the left of the logo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* لون ثابت لرابط Accueil */
+nav ul li a[href="#home"] {
+  background-color: #333; /* اللون الثابت للخلفية */
+  border-radius: 3px;
+}
+
+nav ul li a[href="#home"]:hover {
+  background-color: rgb(125, 16, 16); /* اللون الذي يظهر عند التمرير */
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('SIMO2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgb(40, 4, 4);
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  background-color: rgb(125, 16, 16);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d91919;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Car Section */
+.car-section {
+  background-color: #333;
+  color: white;
+  padding: 60px 20px;
+}
+
+.car-section h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Delivery Section */
+#delivery {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item i {
+  margin-right: 10px;
+}
+
+.confirmation-message {
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+.features-section {
+  padding: 2rem;
+  background-color: #f9f9f9; /* لون الخلفية */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333; /* لون العنوان */
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+  gap: 2rem; /* المسافة بين الأعمدة */
+}
+
+.feature-icon {
+  background: white; /* خلفية البطاقة */
+  border: 1px solid #ddd; /* إطار البطاقة */
+  border-radius: 8px; /* زوايا مدورة */
+  padding: 1rem; /* حشوة داخل البطاقة */
+  text-align: center; /* محاذاة النص */
+  transition: transform 0.3s, box-shadow 0.3s; /* تأثير التحويل */
+}
+
+.feature-icon i {
+  font-size: 2rem; /* حجم الأيقونة */
+  color: #ff5722; /* لون الأيقونات */
+  margin-bottom: 1rem; /* المسافة السفلية */
+}
+
+.feature-icon h4 {
+  font-size: 1.5rem; /* حجم عنوان البطاقة */
+  margin-bottom: 0.5rem; /* المسافة السفلية */
+}
+
+.feature-icon p {
+  font-size: 1rem; /* حجم النص */
+}
+
+.feature-icon:hover {
+  transform: translateY(-5px); /* تحريك البطاقة للأعلى عند التمرير */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+/* تنسيق قسم كيف يعمل */
+#how-it-works {
+  background-color: #ff5722; /* لون خلفية خفيف */
+  
+  padding: 50px 20px; /* مساحة داخلية */
+  text-align: center; /* محاذاة النص في المنتصف */
+  border-radius: 10px; /* زوايا مدورة */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+#how-it-works h2 {
+  font-size: 2.5em; /* حجم خط كبير */
+  margin-bottom: 20px; /* مسافة أسفل العنوان */
+  color: #ffffff; /* لون العنوان */
+}
+
+#how-it-works p {
+  font-size: 1.2em; /* حجم خط للنص التوضيحي */
+  margin-bottom: 30px; /* مسافة أسفل الفقرة */
+}
+
+.steps {
+  list-style-type: none; /* إزالة النقاط من القائمة */
+  padding: 0; /* إزالة المساحة الداخلية */
+  display: flex; /* استخدام الفليكس لتوزيع الخطوات */
+  flex-wrap: wrap; /* يسمح بانتقال العناصر إلى السطر التالي */
+  justify-content: center; /* محاذاة العناصر في المنتصف */
+  margin-bottom: 30px; /* مسافة أسفل الخطوات */
+}
+
+.step {
+  background-color: rgb(255, 255, 255); /* لون خلفية أبيض */
+  border-radius: 10px; /* زوايا مدورة */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  padding: 15px; /* مساحة داخلية */
+  margin: 10px; /* مساحة خارجية بين العناصر */
+  width: 220px; /* عرض ثابت */
+  transition: transform 0.3s, box-shadow 0.3s; /* تأثير الانتقال */
+  position: relative; /* لتطبيق الرسوم المتحركة */
+}
+
+.step:hover {
+  transform: translateY(-5px); /* رفع البطاقة عند التمرير */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ظل أقوى عند التمرير */
+}
+
+.customer-form-card {
+  background-color: white; /* لون خلفية أبيض */
+  border-radius: 10px; /* زوايا مدورة */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  padding: 20px; /* مساحة داخلية */
+  margin: 20px auto; /* مركز البطاقة */
+  width: 300px; /* عرض ثابت */
+  transition: transform 0.3s; /* تأثير التحويل */
+}
+
+.customer-form-card:hover {
+  transform: scale(1.02); /* تكبير البطاقة عند التمرير */
+}
+
+button {
+  background-color: #ff5722; /* لون الخلفية للزر */
+  color: rgb(255, 255, 255); /* لون النص */
+  border: none; /* إزالة الحدود */
+  padding: 10px 15px; /* مساحة داخلية */
+  cursor: pointer; /* شكل المؤشر */
+  border-radius: 5px; /* زوايا مدورة */
+  transition: background-color 0.3s; /* تأثير الانتقال */
+}
+
+button:hover {
+  background-color: #e64a19; /* لون مختلف عند التمرير */
+}
+
+label {
+  display: block; /* عرض كتلة */
+  margin: 10px 0 5px; /* مسافات علوية وسفلية */
+}
+
+input, textarea {
+  width: 100%; /* العرض الكامل */
+  padding: 10px; /* مساحة داخلية */
+  border: 1px solid #ccc; /* لون الحدود */
+  border-radius: 5px; /* زوايا مدورة */
+  margin-bottom: 10px; /* مسافة سفلية */
+  transition: border-color 0.3s; /* تأثير الانتقال */
+}
+
+input:focus, textarea:focus {
+  border-color: #ff5722; /* تغيير لون الحدود عند التركيز */
+  outline: none; /* إزالة الشكل الخارجي */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* يبدأ غير مرئي */
+    transform: translateY(20px); /* يبدأ من الأسفل */
+  }
+  to {
+    opacity: 1; /* يصبح مرئي */
+    transform: translateY(0); /* يعود إلى مكانه الأصلي */
+  }
+}
+#how-it-works {
+  animation: fadeIn 0.8s ease forwards; /* تطبيق الرسوم المتحركة عند التحميل */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* رفع العناصر إلى الأعلى قليلاً */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query for specific screen sizes (optional) */
+@media screen and (max-width: 768px) {
+  #how-it-works {
+    animation: fadeIn 0.6s ease forwards;
+  }
+}
+
+.contact-us-section h3 {
+  font-size: 28px; /* حجم الخط للعنوان */
+  margin-bottom: 20px; /* مسافة سفلية */
+  color: #333; /* لون الخط */
+}
+
+.contact-info {
+  display: flex; /* استخدام الفليكس لتوزيع العناصر */
+  justify-content: space-around; /* توزيع العناصر بالتساوي */
+  margin-bottom: 30px; /* مسافة سفلية */
+}
+
+.contact-item {
+  flex: 1; /* كل عنصر يشغل نفس المساحة */
+  padding: 20px; /* مساحة داخلية للعناصر */
+  border-radius: 8px; /* زوايا مستديرة */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  background-color: #fff; /* لون خلفية للعناصر */
+  transition: transform 0.2s; /* تأثير الانتقال */
+}
+
+.contact-item:hover {
+  transform: translateY(-5px); /* رفع العنصر عند التحويم */
+}
+
+.contact-item i {
+  font-size: 24px; /* حجم أيقونة */
+  color: #ff5a5f; /* لون الأيقونة */
+  margin-bottom: 10px; /* مسافة سفلية بين الأيقونة والنص */
+}
+
+.social-media {
+  margin-top: 20px; /* مسافة علوية */
+}
+
+.social-media h3 {
+  margin-bottom: 10px; /* مسافة سفلية */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر بشكل متوازن */
+  align-items: flex-start; /* محاذاة العناصر في الأعلى */
+  padding: 20px; /* إضافة مساحة داخل الفوتر */
+  background-color: #f8f9fa; /* لون خلفية الفوتر */
+  border-top: 1px solid #e0e0e0; /* خط أعلى الفوتر */
+}
+
+.contact-info, .social-media, .fin {
+  flex: 1; /* تأخذ كل قسم مساحة متساوية */
+  margin: 0 20px; /* مساحة حول كل قسم */
+  background-color: #ffffff; /* خلفية بيضاء للقسم */
+  border-radius: 10px; /* زوايا دائرية */
+  padding: 15px; /* مساحة داخلية */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+
+.h3-3 {
+  margin-bottom: 10px; /* إضافة مساحة أسفل العنوان */
+  color: #333; /* لون العنوان */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مساحة بين الأيقونات والنص */
+  margin: 10px 0; /* إضافة مساحة بين العناصر */
+}
+
+.contact-item i {
+  font-size: 24px; /* حجم الأيقونة */
+}
+
+a {
+  color: #661010; /* لون الروابط */
+  text-decoration: none; /* إزالة الخط السفلي */
+}
+
+a:hover {
+  text-decoration: underline; /* إضافة خط سفلي عند التمرير */
+}
+
+.p-10 {
+  color: #000000; /* لون نص حقوق النشر */
+  text-align: center; /* مركز النص في نهاية الفوتر */
+  margin-top: 20px; /* إضافة مساحة أعلى النص */
+}
+
+.logo10 {
+  width: 120px; /* عرض الشعار */
+  border-radius: 30px; /* زوايا دائرية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* إضافة تأثير الظل حول الصورة */
+  transition: transform 0.5s ease, filter 0.5s ease; /* إعداد التحريك والتحويل */
+  filter: grayscale(50%) contrast(120%); /* إضافة تأثير فلتر على الصورة */
+}
+
+.logo10:hover {
+  transform: scale(1.1) rotate(10deg); /* تكبير الصورة وتدويرها عند التمرير */
+  filter: grayscale(0%) contrast(100%); /* إزالة التأثيرات عند التمرير */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* زيادة تأثير الظل عند التمرير */
+}
+
+.fin {
+  text-align: center; /* محاذاة النص في الوسط */
+}
+
+.p-9 {
+  text-align: start; /* محاذاة النص إلى اليسار */
+  margin-top: 20px; /* إضافة مساحة أعلى النص */
+  color: #000000;
+}
+
+.p-14 {
+  color: #661010;
+}
+@media screen and (max-width: 768px) {
+  .logo10 {
+    width: 100px; /* تقليل عرض الشعار للشاشات الصغيرة */
+    border-radius: 20px; /* تقليل نصف قطر الزوايا */
+    filter: grayscale(70%) contrast(100%); /* زيادة تأثير الفلتر */
+  }
+
+  .fin {
+    text-align: center; /* محاذاة النص في الوسط */
+  }
+
+  .p-9 {
+    text-align: center; /* محاذاة النص في الوسط */
+    margin-top: 10px; /* تقليل المسافة العلوية */
+    color: #333; /* تغيير اللون إلى رمادي أفتح */
+  }
+
+  .p-14 {
+    color: #333; /* تعديل لون النص إلى رمادي أفتح */
+  }
+}
+
+/* استعلامات الوسائط */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* تغيير اتجاه الفليكس إلى عمودي */
+    align-items: center; /* محاذاة العناصر في الوسط */
+  }
+
+  .contact-item {
+    margin-bottom: 20px; /* إضافة مساحة بين العناصر */
+    width: 80%; /* تحديد عرض العناصر */
+  }
+
+  footer {
+    flex-direction: column; /* تغيير اتجاه الفوتر إلى عمودي */
+    align-items: center; /* محاذاة العناصر في الوسط */
+  }
+
+  .contact-info, .social-media, .fin {
+    width: 100%; /* جعل الأقسام تأخذ عرض كامل */
+    margin: 10px 0; /* إضافة مساحة بين الأقسام */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us-section h3 {
+    font-size: 24px; /* تقليل حجم الخط للعناوين */
+  }
+
+  .contact-item i {
+    font-size: 20px; /* تقليل حجم الأيقونات */
+  }
+
+  .p-10 {
+    font-size: 14px; /* تقليل حجم نص حقوق النشر */
+  }
+}
