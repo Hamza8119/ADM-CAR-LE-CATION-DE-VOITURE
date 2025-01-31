@@ -37,14 +37,14 @@ export default {
     transmission: 'Automatic',
     description: 'The Hyundai Sonata is known for its comfortable interior and fuel efficiency.',
   },
-  'Fiat 500': {
+  'Fiat X 500': {
     year: 2020,
     color: 'White',
     transmission: 'Manual',
     description: 'The Fiat 500 is a compact and stylish car, ideal for city driving.',
   },
   
-  'Dacia Logan': {
+  'Dacia Sandero': {
     year: 2020,
     color: 'Red',
     transmission: 'Automatic',
@@ -69,25 +69,20 @@ export default {
     transmission: 'Manual',
     description: 'The Ford Fiesta Octavia offers a balance of practicality and comfort.',
   },
-  'Citroen': {
+  'Citroen C3': {
     year: 2020,
     color: 'Black',
     transmission: 'Automatic',
     description: ' the Citroen provides a smooth and luxurious driving experience.',
   },
-  'Citroen C3': {
+  'Fiat 500': {
     year: 2021,
     color: 'Silver',
     transmission: 'Automatic',
     description: 'The Citroen C3 combines efficiency and reliability.',
   },
-  'Dacia sandero': {
-    year: 2020,
-    color: 'Blue',
-    transmission: 'Automatic',
-    description: 'The Dacia sandero offers a comfortable and refined driving experience.',
-  },
-  'Citroen 2023': {
+
+  'Dacia Stepway': {
     year: 2020,
     color: 'Blue',
     transmission: 'Automatic',

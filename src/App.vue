@@ -1,33 +1,75 @@
 <template>
     
   <div id="app">
-    <!-- Navigation Bar -->
-    <nav>
-  <div class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <!-- Brand -->
+      <div class="logo">
     <img src="./assets/images/logo10.jpg" alt="Logo" class="logo10">
   </div>
-  <ul class="homme">
-    <li><a href="#home">Accueil</a></li>
-    <li><a href="#car-catalogue">Catalogue de voitures</a></li>
-    <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
-    <li><a href="#contact-us">Contactez-nous</a></li>
-    <li><a href="#help">Aide</a></li>
-    <li><router-link to="/Login">Se connecter</router-link></li>
-  </ul>
-  <div class="icon3">
-    <i class="fas fa-bars"></i>
-  </div>
-</nav>
-<div class="mobile-menu">
-  <ul>
-    <li><a href="#home">Accueil</a></li>
-    <li><a href="#car-catalogue">Catalogue de voitures</a></li>
-    <li><a href="#delivery">Spécifier le lieu de livraison</a></li>
-    <li><a href="#contact-us">Contactez-nous</a></li>
-    <li><a href="#help">Aide</a></li>
-    <li><router-link to="/Login">Se connecter</router-link></li>
-  </ul>
-</div>
+
+
+      <!-- Toggle Button for Small Screens -->
+      <button
+        class="navbar-toggler d-lg-none custom-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar for Large Screens -->
+      <div class="collapse navbar-collapse d-none d-lg-block">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active custom-link" href="#home">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="#car-catalogue">Catalogue</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="#delivery">Livraison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="#contact-us">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" href="#help">Aide</a>
+          </li>
+          <li class="nav-item">
+            <router-link to="/Login"  class="nav-link custom-link">Se connecter</router-link>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <!-- Offcanvas for Small Screens -->
+      <div
+        class="offcanvas offcanvas-end custom-offcanvas d-lg-none"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title custom-offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link custom-link" href="#home" data-bs-dismiss="offcanvas">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#car-catalogue" data-bs-dismiss="offcanvas">Catalogue</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#delivery" data-bs-dismiss="offcanvas">Livraison</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#contact-us" data-bs-dismiss="offcanvas">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
 
 
 
@@ -236,7 +278,7 @@ De plus, nous nous engageons à fournir un service client exceptionnel, avec une
 </footer>
 
 
-<p class="p-10">&copy; Location de voitures ADM 2024. Tous droits réservés.</p>
+<p class="p-10">&copy; Location de voitures ADM 2025. Tous droits réservés.</p>
 
 
 
@@ -282,14 +324,14 @@ export default {
       cars: [
         { name: 'Jeep Wrangler', src: image1, price: 500, type: 'Normal', model: 'Wrangler', stars: 5 },
         { name: 'Hyundai Sonata', src: image2, price: 600, type: 'Economic', model: 'Sonata', stars: 4 },
-        { name: 'Fiat 500', src: image3, price: 400, type: 'Normal', model: '500', stars: 3 },
-        { name: 'Dacia Logan', src: image4, price: 300, type: 'Economic', model: 'Logan', stars: 4 },
+        { name: 'Fiat X 500', src: image3, price: 400, type: 'Normal', model: '500', stars: 3 },
+        { name: 'Dacia Sandero', src: image4, price: 300, type: 'Economic', model: 'Logan', stars: 4 },
         { name: 'Renault Clio', src: image5, price: 350, type: 'Normal', model: 'Clio', stars: 4 },
         { name: 'Peugeot 208', src: image6, price: 450, type: 'Economic', model: '208', stars: 5 },
         { name: 'Ford Fiesta', src: image7, price: 400, type: 'Normal', model: 'Fiesta', stars: 5 },
-        { name: 'Citroen 2023', src: image8, price: 370, type: 'Economic', model: 'C3', stars: 4 },
-        { name: 'Citroen C3', src: image9, price: 370, type: 'Economic', model: 'C3', stars: 4 },
-        { name: 'Dacia sandero', src: image11, price: 370, type: 'Economic', model: '2022', stars: 4 },
+        { name: 'Citroen C3', src: image8, price: 370, type: 'Economic', model: 'C3', stars: 4 },
+        { name: 'Fiat 500', src: image9, price: 370, type: 'Economic', model: 'C3', stars: 4 },
+        { name: 'Dacia Stepway', src: image11, price: 370, type: 'Economic', model: '2022', stars: 4 },
       ],
     };
   },
@@ -324,141 +366,164 @@ document.addEventListener('click', (event) => {
 
 
 
-
 </script>
 <style>
-   #app {
-      font-family: Arial, sans-serif;
+  #app {
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* إخفاء شريط التمرير */
+}
+
+
+/* تنسيق الصورة داخل الـ logo */
+.logo10 {
+  max-width: 100%; /* جعل الصورة تتناسب مع العرض */
+  height: auto; /* الحفاظ على النسبة الأصلية للصورة */
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل للصورة */
+}
+
+* {
+  -ms-overflow-style: none;  /* إخفاء شريط التمرير في متصفح Internet Explorer */
+  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* إخفاء شريط التمرير في المتصفحات التي تستخدم WebKit (مثل Chrome و Safari) */
+}
+
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  background: linear-gradient(135deg, #763b3b, #300505, #1a1a2e, #a8b8b4);
+  background-size: 400% 400%;
+  animation: gradientAnimation 4s ease infinite; /* Gradient animation */
+  padding: 6px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Box-shadow effect */
+  border-radius: 40% 0% 45% 0%; /* Rounded corners */
+  opacity: 0.91; /* Fully visible */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-
-
-/* الأسلوب الافتراضي */
-.fa-bars{
-  display:none;
-}
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Logo Style */
+.custom-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease; /* إضافة تأثير التحول */
 }
 
-nav .logo img {
-  max-width: 100px;
+.custom-logo:hover {
+  color: black; /* تغيير اللون إلى أحمر فاتح عند التمرير */
+  transform: scale(1.1); /* تأثير تكبير عند التمرير */
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
+/* Navbar Links */
+.custom-link {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 12px;
   position: relative;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-nav ul li a::before, nav ul li a::after {
-  content: '';
+.custom-link::after {
+  content: "";
   position: absolute;
-  left: 0;
-  width: 100%;
+  width: 0%;
   height: 2px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+  bottom: -5px;
+  left: 50%;
+  background: #ff6347; /* لون أحمر فاتح */
+  transition: all 0.3s ease-in-out;
 }
 
-nav ul li a::before {
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-nav ul li a::after {
-  top: 100%;
-  transform: scaleX(0);
-  transform-origin: top right;
-}
-
-nav ul li a:hover {
-  color: #fff;
-}
-
-nav ul li a:hover::before, nav ul li a:hover::after {
-  background-color: rgb(125, 16, 16);
-  transform: scaleX(1);
-}
-
-/* استعلامات الوسائط */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* إخفاء القائمة الافتراضية */
-  }
-
-  .icon3 {
-    display: block; /* إظهار زر القائمة */
-    cursor: pointer;
-  }
-  .fa-bars{
-  display:block;
-}
-
-  .icon3 i {
-    font-size: 24px;
-    color: white;
-  }
-
-  .mobile-menu {
-    display: none; /* القائمة الجانبية مغلقة افتراضيًا */
-  }
-
-  .mobile-menu.active {
-    display: block; /* فتح القائمة عند النقر */
-  }
-}
-
-/* التنسيق للجوال */
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  background-color: #333;
+.custom-link:hover::after {
   width: 100%;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  left: 0;
 }
 
-.mobile-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.custom-link:hover {
+  color: #ff6347; /* تغيير اللون عند التمرير */
+  filter: brightness(1.2); /* إضافة تأثير السطوع عند التمرير */
 }
 
-.mobile-menu ul li {
-  margin: 10px 0;
-}
-
-.mobile-menu ul li a {
+/* Offcanvas Styling */
+.custom-offcanvas {
+  background: #1a1a2e;
   color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* إضافة تأثير box-shadow */
+  border-radius: 10px; /* إضافة حواف دائرية */
+  padding: 20px; /* تحسين المسافات */
 }
 
-.mobile-menu ul li a:hover {
-  background-color: rgb(125, 16, 16);
+.custom-offcanvas-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6347; /* استخدام اللون الأحمر الفاتح */
+  transition: color 0.3s ease;
+}
+
+.custom-offcanvas-title:hover {
+  color: #ff0000; /* تغيير اللون عند التمرير */
+  filter: brightness(1.5); /* زيادة السطوع عند التمرير */
+}
+
+/* Toggle Button */
+.custom-toggler {
+  border: 1px solid #ff6347; /* استخدام اللون الأحمر الفاتح */
+  padding: 8px;
+  border-radius: 50%; /* جعل الزر دائري */
+}
+
+.custom-toggler:hover {
+  background:black; /* تغيير اللون الخلفي عند التمرير */
+  transition: 0.3s ease-in-out;
+  filter: brightness(1.2); /* زيادة السطوع عند التمرير */
+  transform: scale(1.1); /* تكبير الزر عند التمرير */
+}
+
+/* تحسين تجربة المستخدم (UX) وواجهة المستخدم (UI) */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4; /* لون خلفية محايد */
+  color: #333; /* لون النص */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button, .btn-primary {
+  background-color: #ff6347;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+  background-color: #e53e36; /* تغيير اللون عند التمرير */
+  transform: scale(1.05); /* تكبير الزر عند التمرير */
+  filter: brightness(1.2); /* زيادة السطوع عند التمرير */
 }
 
 
